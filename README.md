@@ -28,3 +28,20 @@ iv) dwh.cfg: This file contains following records:
     SONG_DATA='s3://udacity-dend/song_data'
     
 Database Design: 
+<br>
+<img src="https://udacity-reviews-uploads.s3.us-west-2.amazonaws.com/_attachments/33760/1591881849/Song_ERD.png" />
+<br>
+
+ETL Process:
+Extraction:     Extracting data from song_files and log_files which are availabel at given S3 Bucket address.
+Transformation: Transforming unix time data into readable format.
+Load:           Loading the data into Redshift Database.
+
+In this project we are initially fetching data from S3 buckets into staging tables using Redshift COPY command which will allow us to data in BULK manner,
+then we will load the data into final i.e data base tables.
+
+To run this project: 
+i)   Setup a cluser at Amazon Redshift, get the cluster details and put them into dwh.cfg file. 
+ii)  Run create_tables.py.
+iii) Run etl.py.
+
