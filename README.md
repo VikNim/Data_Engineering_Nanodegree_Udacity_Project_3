@@ -10,6 +10,7 @@ ii) etl.py: This file is the backbone of project.We are extracting data from fil
 iii) sql_queries: This files provides sql querie for all the operations such as create table, insert a row etc.
 
 iv) dwh.cfg: This file contains following records:
+    
     [CLUSTER]
     HOST=CLUSTER_ENDPOINT
     DB_NAME=DATABASE_NAME
